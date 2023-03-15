@@ -1,0 +1,22 @@
+h2{
+    color:rgb(2, 23, 8);
+    font-family:SimSun;
+    font-size:18pt;
+    font-weight: 400;
+}
+.s_title{
+    color:#5b7288;
+    background:#a8d8e2;
+    font-family:Microsoft YaHei;
+    box-shadow:5px 5px 20px 2px rgb(114, 124, 131);
+}
+.s_title:hover{
+    background-color: #7994a5;
+}
+ul,ol{
+    font-size: 12pt;
+    font-family:PingFang SC;
+}
+/* li{
+    font-style:italic;
+} */
