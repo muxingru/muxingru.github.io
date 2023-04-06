@@ -28,6 +28,7 @@
             font-size: 1.5vw;
         }
         .headerback{
+            flex: auto;
             height:100px;
         }
         .container{
@@ -37,6 +38,8 @@
             color: rgb(230, 245, 228);
             text-align: center;
             font-size: 2vw;
+            display: flex;
+            flex-direction: column;
         }
         .typing {
         width: 47%;
@@ -44,7 +47,7 @@
         margin: auto;
         border-right: 1px solid transparent;
         /* solid是实心边框，transparent可以设置在如何有颜色的属性上，border:宽度 样式 颜色 */
-        animation: typing 5s steps(24, end), blink-caret 2.75s step-end infinite;
+        animation: typing 5s steps(24, end), blink-caret 1s step-end infinite;
         /*steps（）有两个参数：参数一是把这次过渡分成几段，这几段其实是在时间上分为几段去显示执行。
         参数二是表示分成几段后，是start还是end执行动画。参数二有两个可选值start和end，默认end。 
         step-end 会使 keyframes 动画到了定义的关键帧处直接突变，并没有变化的过程。
@@ -54,54 +57,65 @@
         }
     /* 打印效果 */
         .sheying{
+            flex: auto;
             background: linear-gradient(rgb(12, 20, 29), rgb(63, 78, 93));
-            height: 1900px;
+            /* height: 1900px; */
             padding: 20px;
             text-shadow: 2px 2px 1px rgb(47, 53, 61);
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
         }
         .photo{
             flex: auto;
-            height: 500px;
+            height: 530px;
             width: 80%;
-            margin: 80px auto 20px;
+            margin: 80px auto ;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            gap: 40px;
+        }
+        .photo:hover{
+            height: 540px;
+            width: 89%;
+            gap: 50px;
+            transition: 2s;
+        }
+        .picture{
+            flex: auto;
+            width: 60px;
+        }
+        img {    
+            /* //只需要设置图片自适应最大宽就行 */
+            max-width:100%;
         }
         .photo2{
             flex: auto;
             height: 600px;
-            width: 60%;
+            width: 70%;
             margin: 100px auto 20px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            color: rgb(36, 67, 93);
+            color: #552ef000;
             text-shadow: none;
-
+            gap: 10px;
         }
-        .img{
-            flex: auto;
-            width: 100%;
-            height: 100%;
-            object-fit:cover; 
-            /* 被替换的内容在保持其宽高比的同时填充元素的整个内容框。
-            如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。 */
-        }
-        .photo:hover,.photo2:hover{
-            height: 570px;
-            width: 85%;
+        .photo2:hover{
+            height:700px;
+            width: 80%;
             transition: 2s;
             color: aliceblue;
         }
-
         .huihua{
+            flex: auto;
             background: linear-gradient( rgb(63, 78, 93),rgb(62, 92, 87));
             height: 1000px;
             padding: 80px 0 0 0;
             text-shadow: 2px 2px 1px rgb(47, 53, 61);
         }
         .wudao{
+            flex: auto;
             background: linear-gradient(rgb(62, 92, 87), rgb(184, 201, 163));
             height: 1000px;
             padding: 40px 0 0 0;
@@ -137,34 +151,39 @@
             text-align: center;
             font-size: 5vw;
         }
-        .photo{
-            width: 40%;
-            flex-direction: column;
-            gap: 50px;
-        }
-        .sheying{
-            background: linear-gradient(rgb(12, 20, 29), rgb(40, 67, 54));
-        }
-        .typing {
-        animation-play-state:paused;
-        }
         .headerback{
             height:30px;
         }
-        .photo:hover{
-            width: 70%;
-            transition: 1s;
+        .photo{
+            height: auto;
+            flex-direction: column;
+            gap: 0;
         }
-        .photo2{
-            height: 600px;
-            width: 70%;
-            margin: 100px auto 20px;
+        .picture{
+            flex: auto;
+            width: 100%;
+        }
+        .photo:hover{
+            flex: auto;
+            height: auto;
+            width: 80%;
+            margin: 80px auto ;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            color: rgb(36, 67, 93);
-            text-shadow: none;
-
+            gap: 0px;            
+        }
+        .photo2{
+            height: 200px;
+            width: 95%;
+            margin: 100px auto 20px;
+            font-size: 3.5vw;
+        }
+        .photo2:hover{
+            height:220px;
+            width: 100%;
+            transition: 2s;
+            color: aliceblue;
+            box-shadow: 1px 1px 20px 2px rgb(80, 84, 92);
         }
     }
     a:link{text-decoration:none ; color:white ;}
@@ -175,15 +194,15 @@
 </head>
 <body>
     <div class="header">
-        <div class="icon"> <font size=7% style="font-family: STHupo;">hobby-----></font> </div>
+        <div class="icon"> <font size=7vw style="font-family: STHupo;">hobby-----></font> </div>
         <div class="sy">
-            <a href="#sheying"><font size=6% style="font-family: STHupo;">摄影</font></a>
+            <a href="#sheying"><font size=6vh style="font-family: STHupo;">摄影</font></a>
         </div>
         <div class="hh">
-            <a href="#huihua"><font size=6% style="font-family: STHupo;">绘画</font></a>
+            <a href="#huihua"><font size=6vh style="font-family: STHupo;">绘画</font></a>
         </div>
         <div class="wd">
-            <a href="#wudao"><font size=6% style="font-family: STHupo;">舞蹈</font></a>
+            <a href="#wudao"><font size=6vh style="font-family: STHupo;">舞蹈</font></a>
         </div>
     </div>
 
@@ -206,14 +225,22 @@
                 <font style="color: rgb(174, 214, 201);">———— 摄影 ————</font>
             </a>
             <div class="photo">
-                <img src="school1.jpg" alt="图片不见啦！">
-                <img src="school2.jpg" alt="图片不见啦！">
-                <img src="school3.jpg" alt="图片不见啦！">
+                <div class="picture">                
+                    <img src="school1.jpg"  alt="图片不见啦！">
+                </div>
+                <div class="picture">
+                    <img src="school2.jpg"  alt="图片不见啦！">
+                </div>
+                <div class="picture">
+                    <img src="school3.jpg"  alt="图片不见啦！">
+                </div>
             </div>
             <div class="photo2">
-                <img src="school4.jpg" alt="图片不见啦！">
-                <br> <br> <br> 四季更迭 <br> , <br> 光阴流转 <br> <br> <br>
-                <img src="school5.jpg" alt="图片不见啦！">
+                <img src="school4.jpg" width=43% alt="图片不见啦！">
+                <font>
+                    <br> <br> <br> 四季更迭 <br> , <br> 光阴流转 <br> 。<br> <br>
+                </font>
+                <img src="school5.jpg" width=43% alt="图片不见啦！">
             </div>
         </div>
 
