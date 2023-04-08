@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+    4.6
+    问题：
+    1.boddyheader的那三个链接到了响应式手机上看起来非常诡异 
+    怎么样能让字体小一点
+    2.所有照片加载起来非常慢
+    3.index里面详细信息总是藏在smallbox那一行下面
+    4.hobby下面那两张图片在手机上看起来过于狭长
+    5.绘画和舞蹈分区想想弄点什么 -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +23,30 @@
         }
         .header{
             width: 100%; 
-            height: 70px;
+            height: 50px;
+            padding: 1%;
             position:fixed;
             display: flex;
             flex-direction: row;
-            background: linear-gradient(rgb(137, 125, 133), rgb(119, 125, 121));
+            gap: 15%;
+            background: linear-gradient(rgb(83, 86, 97), rgb(48, 72, 97));
         }
-        .icon,.sy,.wd,.hh{
+        .icon{
             flex:auto;
-            line-height: 70px;
             text-align: center;
-            color: rgb(237, 240, 242);
-            font-size: 1.5vw;
+            color: rgb(255, 255, 255);
+            font-size: 1.6vw;
+            /* background-color: azure; */
+        }
+        .sy,.wd,.hh{
+            flex:auto;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 1vw;
+            padding: 0.5%;
+            background-color: rgba(59, 58, 93, 0.347);
+            border-radius: 10px;
+            
         }
         .headerback{
             flex: auto;
@@ -151,6 +172,16 @@
             text-align: center;
             font-size: 5vw;
         }
+        .header{
+            width: 100%; 
+            height: 80px;
+            position:fixed;
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+            line-height: 80px;
+            background: linear-gradient(rgb(83, 86, 97), rgb(48, 72, 97));
+        }
         .headerback{
             height:30px;
         }
@@ -194,7 +225,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="icon"> <font size=7vw style="font-family: STHupo;">hobby-----></font> </div>
+        <div class="icon"> <font size=7vw style="font-family: STHupo;">hobby---></font> </div>
         <div class="sy">
             <a href="#sheying"><font size=6vh style="font-family: STHupo;">摄影</font></a>
         </div>
